@@ -1,0 +1,13 @@
+.imageTransparencia{
+    background-image: url("transparencia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 1500px;
+}
+
+
+a{
+    text-decoration: 0;
+    margin:3px;
+}

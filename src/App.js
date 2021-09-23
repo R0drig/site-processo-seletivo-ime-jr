@@ -1,25 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './componentes/Home'
+import BomHumor from './componentes/bomHumor/BomHumor'
+import Coragem from './componentes/Coragem/Coragem'
+import Transparencia from './componentes/transparencia/Transparencia'
+import Proatividade from './componentes/Proatividade/Proatividade'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App =() =>{
+  return(
+    <>
+    <Router>
+      <Route path="/" exact render={() =>{return(<Home 
+      texto="Por que as Competências a Seguir são Importantes para o Mercado de Trabalho?"
+      />)}}/>
+      <Route path="/bomhumor" exact render ={() =>{return(
+        <BomHumor />
+      )}} />
+      <Route path="/coragem" exact render={()=>{return(<Coragem />)}} />  
+      <Route path="/proatividade" exact render={()=>{return(<Proatividade />)}} />
+      <Route path="/transparencia" exact render={()=>{return(<Transparencia />)}} />
+    </Router>
+    </>
+  )
 }
 
 export default App;
